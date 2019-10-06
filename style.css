@@ -264,7 +264,7 @@ body {
     width: 100%;
     height: auto; }
   .variant-block {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     margin-right: 30px;
     padding-top: 30px;
@@ -474,6 +474,26 @@ body {
   display: flex; }
 .map__block {
   padding: 0 25px; }
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px; }
+
+.slick-dots li button {
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  border-color: #fac95f;
+  background-color: transparent;
+  padding: 0;
+  margin: 10px; }
+
+.slick-active button {
+  height: 15px !important;
+  width: 15px !important;
+  background-color: #fac95f !important; }
 
 @media screen and (max-width: 1200px) {
   .feature-block {
