@@ -1,5 +1,5 @@
 jQuery(function() {
-
+    //sliders
     $('.places-block').slick({
         infinite: true,
         slidesToShow: 3,
@@ -36,4 +36,28 @@ jQuery(function() {
     });
 
     $('button[role="tab"]').empty();
+
+    //burger-menu
+    $('.close').hide();
+    $('.open').hide();
+
+    if ($(window).width() < 990) {
+        $('.open').show();
+        $('.menu').addClass('hideMenu');
+        $('.subHeader').removeClass('align-items-center');
+    }
+
+
+    $('.open').on('click', function() {
+        $('.menu').removeClass('hideMenu');
+        $('.open').hide();
+        $('.close').show();
+    });
+
+    $('.close').on('click', function() {
+        $('.menu').addClass('hideMenu');
+        $('.close').hide();
+        $('.open').show();
+    });
+
 });
